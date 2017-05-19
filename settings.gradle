@@ -1,0 +1,5 @@
+rootProject.name = 'main'
+include 'tomcat'
+include 'HOI4'
+include 'foc'
+
