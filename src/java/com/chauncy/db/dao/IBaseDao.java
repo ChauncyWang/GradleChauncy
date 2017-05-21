@@ -25,9 +25,10 @@ public interface IBaseDao<T> {
     /**
      * 更新
      * @param t 要更新的数据
+     * @return 影响的数据个数
      * @throws SQLException 更新失败 抛出的 异常
      */
-    void update(T t) throws SQLException;
+    int update(T t) throws SQLException;
 
     /**
      * 根据 ID 查询数据

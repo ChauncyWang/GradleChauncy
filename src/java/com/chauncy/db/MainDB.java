@@ -2,13 +2,7 @@ package com.chauncy.db;
 
 import com.chauncy.db.dao.UserDaoImpl;
 import com.chauncy.db.entity.User;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.SQLException;
 
 /**
@@ -19,7 +13,12 @@ public class MainDB {
     public static void main(String[] args) {
         try {
             UserDaoImpl userDao = new UserDaoImpl();
-            System.out.println(userDao.all());
+            User user = new User();
+            user.setId("111");
+            user.setPassword("111");
+            userDao.add(user);
+            user.setPassword("222");
+            userDao.update(user);
         } catch (SQLException e) {
             e.printStackTrace();
         }

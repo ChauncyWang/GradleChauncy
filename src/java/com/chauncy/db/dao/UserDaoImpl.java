@@ -26,12 +26,13 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public void delete(User user) throws SQLException {
-
+        sqlSession.delete(namespace+"deleteUser",user);
+        sqlSession.commit();
     }
 
     @Override
-    public void update(User user) throws SQLException {
-
+    public int update(User user) throws SQLException {
+       return sqlSession.update(namespace+"updateUser",user);
     }
 
     @Override

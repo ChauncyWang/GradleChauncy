@@ -9,10 +9,18 @@
     <insert id="insertUser" parameterType="User">
         INSERT INTO db_user(id,password) VALUES (#{id},#{password})
     </insert>
+    <!-- 删除 一个 user -->
+    <delete id="deleteUser" parameterType="User">
+        DELETE FROM db_user WHERE id = #{id}
+    </delete>
     <!-- 查询所有User -->
     <select id="selectAll" resultMap="selectAllMap">
         SELECT * FROM db_user;
     </select>
+    <!-- 更新User -->
+    <update id="updateUser" parameterType="User">
+        UPDATE db_user SET password = #{password} WHERE id = ${id}
+    </update>
 
     <!-- 各种 Map -->
     <resultMap id="selectAllMap" type="User">
