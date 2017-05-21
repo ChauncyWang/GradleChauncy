@@ -1,11 +1,9 @@
 package com.chauncy.niochet.server.actions;
 
 import com.chauncy.nionetframework.entity.NetMessageType;
-import com.chauncy.niochet.entity.User;
+import com.chauncy.db.entity.User;
 import com.chauncy.nionetframework.entity.MessageNode;
 import org.apache.log4j.Logger;
-
-import java.io.IOException;
 
 /**
  * 处理注册消息

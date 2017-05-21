@@ -1,5 +1,6 @@
 package com.chauncy.niochet.entity;
 
+import com.chauncy.db.entity.UserInfo;
 import com.chauncy.nionetframework.entity.IoSession;
 
 import java.nio.channels.SocketChannel;

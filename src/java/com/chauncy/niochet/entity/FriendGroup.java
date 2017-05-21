@@ -1,5 +1,7 @@
 package com.chauncy.niochet.entity;
 
+import com.chauncy.db.entity.UserInfo;
+
 import java.util.List;
 
 /**

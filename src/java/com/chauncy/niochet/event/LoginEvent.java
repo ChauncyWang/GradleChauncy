@@ -1,6 +1,6 @@
 package com.chauncy.niochet.event;
 
-import com.chauncy.niochet.entity.User;
+import com.chauncy.db.entity.User;
 import com.chauncy.nionetframework.entity.IoSession;
 
 /**

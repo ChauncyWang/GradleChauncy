@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- User Mapper -->
+<mapper namespace="com.chauncy.db.entity.User">
+    <!-- 插入一个User -->
+    <insert id="insertUser" parameterType="User">
+        INSERT INTO db_user(id,password) VALUES (#{id},#{password})
+    </insert>
+    <!-- 查询所有User -->
+    <select id="selectAll" resultMap="selectAllMap">
+        SELECT * FROM db_user;
+    </select>
+
+    <!-- 各种 Map -->
+    <resultMap id="selectAllMap" type="User">
+        <id property="id" column="id"/>
+        <result property="password" column="password"/>
+    </resultMap>
+</mapper>

@@ -1,8 +1,8 @@
 package com.chauncy.niochet.event.builtIn;
 
 import com.chauncy.niochet.entity.StatusSession;
-import com.chauncy.niochet.entity.User;
-import com.chauncy.niochet.entity.UserInfo;
+import com.chauncy.db.entity.User;
+import com.chauncy.db.entity.UserInfo;
 import com.chauncy.niochet.entity.UserStatus;
 import com.chauncy.niochet.event.LoginEvent;
 import com.chauncy.niochet.event.LoginListener;

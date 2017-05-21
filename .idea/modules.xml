@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/Gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HOI4/HOI4.iml" filepath="$PROJECT_DIR$/.idea/modules/HOI4/HOI4.iml" group="HOI4" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HOI4/HOI4_main.iml" filepath="$PROJECT_DIR$/.idea/modules/HOI4/HOI4_main.iml" group="HOI4" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HOI4/HOI4_test.iml" filepath="$PROJECT_DIR$/.idea/modules/HOI4/HOI4_test.iml" group="HOI4" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foc/foc.iml" filepath="$PROJECT_DIR$/.idea/modules/foc/foc.iml" group="foc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foc/foc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/foc/foc_main.iml" group="foc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foc/foc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/foc/foc_test.iml" group="foc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main.iml" filepath="$PROJECT_DIR$/.idea/modules/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main_main.iml" filepath="$PROJECT_DIR$/.idea/modules/main_main.iml" group="main" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main_test.iml" filepath="$PROJECT_DIR$/.idea/modules/main_test.iml" group="main" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tomcat/tomcat.iml" filepath="$PROJECT_DIR$/.idea/modules/tomcat/tomcat.iml" group="tomcat" />
+    </modules>
+  </component>
+</project>

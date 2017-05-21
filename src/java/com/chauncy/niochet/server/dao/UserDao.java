@@ -1,7 +1,7 @@
 package com.chauncy.niochet.server.dao;
 
-import com.chauncy.niochet.entity.User;
-import com.chauncy.niochet.entity.UserInfo;
+import com.chauncy.db.entity.User;
+import com.chauncy.db.entity.UserInfo;
 
 /**
  * 用户dao

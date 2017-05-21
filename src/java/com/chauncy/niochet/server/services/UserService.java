@@ -1,8 +1,8 @@
 package com.chauncy.niochet.server.services;
 
 import com.chauncy.niochet.server.dao.UserDao;
-import com.chauncy.niochet.entity.User;
-import com.chauncy.niochet.entity.UserInfo;
+import com.chauncy.db.entity.User;
+import com.chauncy.db.entity.UserInfo;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 
