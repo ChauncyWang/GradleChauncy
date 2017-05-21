@@ -1,6 +1,8 @@
 package cc.chauncy.foc.JLA;
 
 public enum Token {
+    //文件结束
+    EOF(0),
     //保留字
     AND("and",1),
     ARRAY("array",2),

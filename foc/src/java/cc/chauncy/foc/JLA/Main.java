@@ -1,5 +1,8 @@
 package cc.chauncy.foc.JLA;
 
+import org.pushingpixels.substance.api.skin.SubstanceDustLookAndFeel;
+
+import javax.swing.*;
 import java.io.File;
 
 /**
@@ -8,7 +11,19 @@ import java.io.File;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(Tools.readAll("text.txt"));
-        scanner.nextToken();
+        SwingUtilities.invokeLater(()->{
+                try {
+                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+                    JLAMain jla = new JLAMain();
+                } catch (UnsupportedLookAndFeelException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+        });
     }
 }
