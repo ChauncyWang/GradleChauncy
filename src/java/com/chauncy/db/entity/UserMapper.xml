@@ -13,6 +13,10 @@
     <delete id="deleteUser" parameterType="User">
         DELETE FROM db_user WHERE id = #{id}
     </delete>
+    <!-- 根据id查询 User -->
+    <select id="selectUser" resultType="User">
+        SELECT id,password FROM db_user WHERE id = #{id}
+    </select>
     <!-- 查询所有User -->
     <select id="selectAll" resultMap="selectAllMap">
         SELECT * FROM db_user;

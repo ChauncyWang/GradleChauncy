@@ -35,7 +35,7 @@ public interface IBaseDao<T> {
      * @param id 要查询的 数据 id
      * @throws SQLException 查询失败 抛出的 异常
      */
-    void findByID(String id) throws SQLException;
+    T findByID(String id) throws SQLException;
 
     /**
      * 获取数据表的 所有信息

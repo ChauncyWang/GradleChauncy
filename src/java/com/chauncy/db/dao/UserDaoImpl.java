@@ -36,8 +36,8 @@ public class UserDaoImpl implements IUserDao {
     }
 
     @Override
-    public void findByID(String id) throws SQLException {
-
+    public User findByID(String id) throws SQLException {
+        return sqlSession.selectOne(namespace+"selectUser",id);
     }
 
     @Override

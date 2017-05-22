@@ -5,6 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../foc/src/groovy">
       <sourceFolder url="file://$MODULE_DIR$/../../../foc/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../foc/src/groovy" type="java-resource" />
     </content>
     <content url="file://$MODULE_DIR$/../../../foc/src/java">
       <sourceFolder url="file://$MODULE_DIR$/../../../foc/src/java" isTestSource="false" />
