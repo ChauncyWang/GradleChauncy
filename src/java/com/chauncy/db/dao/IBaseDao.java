@@ -13,14 +13,14 @@ public interface IBaseDao<T> {
      * @param t 要添加的数据
      * @throws SQLException 添加失败 抛出的 异常
      */
-    void add(T t) throws SQLException;
+    int add(T t) throws SQLException;
 
     /**
      * 删除
      * @param t 要删除的数据
      * @throws SQLException 删除失败 抛出的 异常
      */
-    void delete(T t) throws SQLException;
+    int delete(T t) throws SQLException;
 
     /**
      * 更新

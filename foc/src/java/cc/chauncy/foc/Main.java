@@ -1,6 +1,9 @@
 package cc.chauncy.foc;
 
 import cc.chauncy.foc.entity.Grammar;
+import cc.chauncy.hoi4.GroovyIOTools;
+
+import java.io.File;
 
 /**
  *
@@ -8,7 +11,9 @@ import cc.chauncy.foc.entity.Grammar;
  */
 public class Main {
     public static void main(String[] args) {
-        String s = "S -> A\nA -> 10";
-        Grammar grammar = new Grammar('S',s);
+        String s = (String) GroovyIOTools.readAll("foc/src/res/test.txt");
+        System.out.println(s);
+        Grammar grammar = new Grammar(s);
+        System.out.print(grammar);
     }
 }

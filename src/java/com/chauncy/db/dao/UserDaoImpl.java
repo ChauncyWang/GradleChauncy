@@ -19,20 +19,24 @@ public class UserDaoImpl implements IUserDao {
     /** mapper的namespace */
     private static String namespace = "com.chauncy.db.entity.User.";
     @Override
-    public void add(User user) throws SQLException {
-        sqlSession.insert(namespace+"insertUser",user);
+    public int add(User user) throws SQLException {
+        int t = sqlSession.insert(namespace+"insertUser",user);
         sqlSession.commit();
+        return t;
     }
 
     @Override
-    public void delete(User user) throws SQLException {
-        sqlSession.delete(namespace+"deleteUser",user);
+    public int delete(User user) throws SQLException {
+        int t = sqlSession.delete(namespace+"deleteUser",user);
         sqlSession.commit();
+        return t;
     }
 
     @Override
     public int update(User user) throws SQLException {
-       return sqlSession.update(namespace+"updateUser",user);
+        int t = sqlSession.update(namespace+"updateUser",user);
+        sqlSession.commit();
+        return t;
     }
 
     @Override
