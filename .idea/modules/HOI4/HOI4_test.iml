@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":HOI4:test" external.linked.project.path="$MODULE_DIR$/../../../HOI4" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="main" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../../HOI4/build/classes/test" />
+    <output-test url="file://$MODULE_DIR$/../../../HOI4/build/classes/java/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../HOI4/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../HOI4/src/test/groovy" isTestSource="true" />
@@ -12,6 +12,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="HOI4_main" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../HOI4/build/classes/groovy/main" />
+          <root url="file://$MODULE_DIR$/../../../HOI4/build/classes/scala/main" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Gradle: org.java.net.substance:substance:6.0" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.7" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-lang:scala-swing:2.10.6" level="project" />

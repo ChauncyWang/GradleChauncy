@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HOI4/HOI4_main.iml" filepath="$PROJECT_DIR$/.idea/modules/HOI4/HOI4_main.iml" group="HOI4" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HOI4/HOI4_test.iml" filepath="$PROJECT_DIR$/.idea/modules/HOI4/HOI4_test.iml" group="HOI4" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/foc/foc.iml" filepath="$PROJECT_DIR$/.idea/modules/foc/foc.iml" group="foc" />
+      <module fileurl="file://$PROJECT_DIR$/foc_hu/foc_hu.iml" filepath="$PROJECT_DIR$/foc_hu/foc_hu.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/foc/foc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/foc/foc_main.iml" group="foc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/foc/foc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/foc/foc_test.iml" group="foc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/main.iml" filepath="$PROJECT_DIR$/.idea/modules/main.iml" />

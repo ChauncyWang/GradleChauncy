@@ -1,6 +1,5 @@
 package cc.chauncy.foc.entity;
 
-import java.util.Arrays;
 
 /**
  * 文法规则
