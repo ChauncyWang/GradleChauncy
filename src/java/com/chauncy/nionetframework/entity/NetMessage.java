@@ -7,13 +7,13 @@ import java.io.Serializable;
  * Created by chauncy on 17-3-17.
  */
 public class NetMessage implements Serializable {
-	public NetMessageType what;//message type
+	public int what;//message type
 	public Object obj;//Carry information
 
 	public NetMessage() {
 	}
 
-	public NetMessage(NetMessageType what, Object obj) {
+	public NetMessage(int what, Object obj) {
 		this.what = what;
 		this.obj = obj;
 	}

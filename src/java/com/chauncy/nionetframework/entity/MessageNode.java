@@ -24,7 +24,7 @@ public class MessageNode {
 		this.message = message;
 	}
 
-	public MessageNode(String ip, int port, NetMessageType type, Object obj) {
+	public MessageNode(String ip, int port, int type, Object obj) {
 		this(ip, port, new NetMessage(type, obj));
 	}
 

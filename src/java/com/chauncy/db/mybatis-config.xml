@@ -15,6 +15,7 @@
     <!-- 类型简写 -->
     <typeAliases>
         <typeAlias type="com.chauncy.db.entity.User" alias="User"/>
+        <typeAlias type="com.chauncy.db.entity.UserInfo" alias="UserInfo"/>
     </typeAliases>
 
     <!-- 配置环境 -->

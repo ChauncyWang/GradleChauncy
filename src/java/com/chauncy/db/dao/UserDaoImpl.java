@@ -3,6 +3,7 @@ package com.chauncy.db.dao;
 import com.chauncy.db.entity.User;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -15,13 +16,15 @@ public class UserDaoImpl implements IUserDao {
     @Override
     public int add(User user) throws SQLException {
         int t = sqlSession.insert(namespace+"insertUser",user);
+        t += sqlSession.insert(namespace+"insertUserInfo",user);
         sqlSession.commit();
         return t;
     }
 
     @Override
     public int delete(User user) throws SQLException {
-        int t = sqlSession.delete(namespace+"deleteUser",user);
+        int t = sqlSession.delete(namespace+"deleteUserInfo",user);
+        t += sqlSession.delete(namespace+"deleteUser",user);
         sqlSession.commit();
         return t;
     }
@@ -41,5 +44,23 @@ public class UserDaoImpl implements IUserDao {
     @Override
     public List<User> all() throws SQLException {
         return sqlSession.selectList(namespace+"selectAll");
+    }
+
+    @Override
+    public User login(String id, String pw) throws SQLException {
+        HashMap map = new HashMap();
+        map.put("id",id);
+        map.put("password",pw);
+        return sqlSession.selectOne(namespace+"login",map);
+    }
+
+    @Override
+    public boolean register(User user){
+        try{
+            add(user);
+            return true;
+        }catch (Exception e) {
+            return false;
+        }
     }
 }

@@ -1,34 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- User Mapper -->
 <mapper namespace="com.chauncy.db.entity.User">
-    <!-- 插入一个User -->
-    <insert id="insertUser" parameterType="User">
-        INSERT INTO db_user(id,password) VALUES (#{id},#{password})
-    </insert>
-    <!-- 删除 一个 user -->
-    <delete id="deleteUser" parameterType="User">
-        DELETE FROM db_user WHERE id = #{id}
-    </delete>
-    <!-- 根据id查询 User -->
-    <select id="selectUser" resultType="User">
-        SELECT id,password FROM db_user WHERE id = #{id}
-    </select>
-    <!-- 查询所有User -->
-    <select id="selectAll" resultMap="selectAllMap">
-        SELECT * FROM db_user;
-    </select>
-    <!-- 更新User -->
-    <update id="updateUser" parameterType="User">
-        UPDATE db_user SET password = #{password} WHERE id = ${id}
-    </update>
+	<!-- 插入 User -->
+	<insert id="insertUser" parameterType="User">
+		INSERT INTO db_user (id, password) VALUES (#{id}, #{password})
+	</insert>
+	<!-- 插入 UserInfo -->
+	<insert id="insertUserInfo" parameterType="User">
+		INSERT INTO db_user_info VALUES (#{id}, #{userInfo.isMan}, #{userInfo.age}, #{userInfo.isCity})
+	</insert>
 
-    <!-- 各种 Map -->
-    <resultMap id="selectAllMap" type="User">
-        <id property="id" column="id"/>
-        <result property="password" column="password"/>
-    </resultMap>
+	<!-- 删除  user -->
+	<delete id="deleteUser" parameterType="User">
+		DELETE FROM db_user
+		WHERE id = #{id}
+	</delete>
+	<!-- 删除  userInfo -->
+	<delete id="deleteUserInfo" parameterType="User">
+		DELETE FROM db_user_info
+		WHERE u_id = #{id}
+	</delete>
+	<!-- 根据id查询 User -->
+	<select id="selectUser" resultMap="selectMap">
+		SELECT
+			id,
+			password,
+			is_man,
+			age,
+			is_city
+		FROM db_user, db_user_info
+		WHERE id = #{id} AND u_id = #{id}
+	</select>
+	<select id="login" resultMap="selectMap">
+		SELECT
+			id,
+			password,
+			is_man,
+			age,
+			is_city
+		FROM db_user, db_user_info
+		WHERE id = #{id} AND u_id = #{id} and password=#{password}
+	</select>
+	<!-- 查询所有User -->
+	<select id="selectAll" resultMap="selectAllMap">
+		SELECT *
+		FROM db_user, db_user_info
+		WHERE id = u_id;
+	</select>
+	<!-- 更新User -->
+	<update id="updateUser" parameterType="User">
+		UPDATE db_user,db_user_info
+		SET
+			password = #{password},
+			is_man = #{userInfo.isMan},
+			age = #{userInfo.age},
+			is_city = #{userInfo.isCity}
+		WHERE id = ${id} and u_id = id
+	</update>
+
+	<!-- 各种 Map -->
+	<resultMap id="selectMap" type="User">
+		<id property="id" column="id"/>
+		<result property="password" column="password"/>
+		<association property="userInfo" javaType="UserInfo">
+			<result property="isMan" column="is_man"/>
+			<result property="age" column="age"/>
+			<result property="isCity" column="is_city"/>
+		</association>
+	</resultMap>
+
+	<resultMap id="selectAllMap" type="User">
+		<id property="id" column="id"/>
+		<result property="password" column="password"/>
+		<association property="userInfo" javaType="UserInfo">
+			<result property="isMan" column="is_man"/>
+			<result property="age" column="age"/>
+			<result property="isCity" column="is_city"/>
+		</association>
+	</resultMap>
 </mapper>

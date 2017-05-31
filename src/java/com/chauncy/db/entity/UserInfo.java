@@ -13,7 +13,12 @@ public class UserInfo implements Serializable {
 
 	public UserInfo() {
 
+	}
 
+	public UserInfo(boolean isMan, int age, boolean isCity) {
+		this.isMan = isMan;
+		this.age = age;
+		this.isCity = isCity;
 	}
 
 	public boolean isMan() {
