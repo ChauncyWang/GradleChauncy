@@ -1,8 +1,6 @@
 package com.chauncy.db.dao;
 
 import com.chauncy.db.entity.User;
-import com.chauncy.db.util.SQLHelper;
-import org.apache.ibatis.session.SqlSession;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -12,10 +10,6 @@ import java.util.List;
  * Created by 13969 on 2017/5/22.
  */
 public class UserDaoImpl implements IUserDao {
-    /** mybatis配置文件所在位置 */
-    public static String url = "com/chauncy/db/mybatis-config.xml";
-    /**  sql会话 */
-    private static SqlSession sqlSession = SQLHelper.getSqlSession(url);
     /** mapper的namespace */
     private static String namespace = "com.chauncy.db.entity.User.";
     @Override

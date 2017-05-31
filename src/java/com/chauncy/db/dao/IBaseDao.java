@@ -1,5 +1,8 @@
 package com.chauncy.db.dao;
 
+import com.chauncy.db.util.SQLHelper;
+import org.apache.ibatis.session.SqlSession;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -8,6 +11,8 @@ import java.util.List;
  * Created by 13969 on 2017/5/21.
  */
 public interface IBaseDao<T> {
+    /**  sql会话 */
+    SqlSession sqlSession = SQLHelper.getSqlSession();
     /**
      * 添加
      * @param t 要添加的数据
