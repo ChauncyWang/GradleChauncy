@@ -4,6 +4,9 @@
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chauncy.db.entity.Account">
 	<insert id="insertAccount" parameterType="Account">
-
+		INSERT INTO db_account VALUES (#{id}, #{isPay}, #{monry}, #{payTime}, #{purpose}, #{place})
 	</insert>
+	<delete id="deleteAccount" parameterType="Account">
+		DELETE FROM db_account WHERE u_id = #{id}
+	</delete>
 </mapper>

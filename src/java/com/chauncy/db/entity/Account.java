@@ -6,9 +6,9 @@ package com.chauncy.db.entity;
  */
 public class Account {
     private String id;
-    private boolean cost;
+    private boolean pay;
     private double money;
-    private String time;
+    private String payTime;
     private String purpose;
     private String place;
 
@@ -17,9 +17,9 @@ public class Account {
 
     public Account(String id, boolean cost, double money, String time, String purpose, String place) {
         this.id = id;
-        this.cost = cost;
+        this.pay = cost;
         this.money = money;
-        this.time = time;
+        this.payTime = time;
         this.purpose = purpose;
         this.place = place;
     }
@@ -32,12 +32,12 @@ public class Account {
         this.id = id;
     }
 
-    public boolean isCost() {
-        return cost;
+    public boolean isPay() {
+        return pay;
     }
 
-    public void setCost(boolean cost) {
-        this.cost = cost;
+    public void setPay(boolean pay) {
+        this.pay = pay;
     }
 
     public double getMoney() {
@@ -48,12 +48,12 @@ public class Account {
         this.money = money;
     }
 
-    public String getTime() {
-        return time;
+    public String getPayTime() {
+        return payTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setPayTime(String payTime) {
+        this.payTime = payTime;
     }
 
     public String getPurpose() {
@@ -76,9 +76,9 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "id='" + id + '\'' +
-                ", cost=" + cost +
+                ", pay=" + pay +
                 ", money=" + money +
-                ", time='" + time + '\'' +
+                ", payTime='" + payTime + '\'' +
                 ", purpose='" + purpose + '\'' +
                 ", place='" + place + '\'' +
                 '}';
