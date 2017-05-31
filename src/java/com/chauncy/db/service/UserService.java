@@ -48,7 +48,10 @@ public class UserService {
      */
     public static boolean updateInfo(User user) {
         try {
-            userDao.update(user);
+            int t = userDao.update(user);
+            if(t == 0) {
+                return false;
+            }
             return true;
         }catch (Exception e){
             return false;

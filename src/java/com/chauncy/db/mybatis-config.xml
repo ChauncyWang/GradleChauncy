@@ -16,6 +16,7 @@
     <typeAliases>
         <typeAlias type="com.chauncy.db.entity.User" alias="User"/>
         <typeAlias type="com.chauncy.db.entity.UserInfo" alias="UserInfo"/>
+        <typeAlias type="com.chauncy.db.entity.Account" alias="Account"/>
     </typeAliases>
 
     <!-- 配置环境 -->
@@ -35,5 +36,6 @@
     <!-- 配置 Mapper -->
     <mappers>
         <mapper resource="com/chauncy/db/entity/UserMapper.xml"/>
+        <mapper resource="com/chauncy/db/entity/AccountMapper.xml"/>
     </mappers>
 </configuration>
