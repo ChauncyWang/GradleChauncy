@@ -16,7 +16,7 @@ import java.sql.SQLException;
  */
 public class MainDB extends NIOServer{
     public static void main(String[] args) {
-        new MainDB(1000);
+        new MainDB(18896);
     }
     public MainDB(int port) {
         super(port);

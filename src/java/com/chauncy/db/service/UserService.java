@@ -12,7 +12,7 @@ import com.chauncy.db.entity.UserInfo;
  */
 public class UserService {
     /**
-     * 用来 服务的dao层
+     * 用来 服务的dao
      */
     private static IUserDao userDao = new UserDaoImpl();
 

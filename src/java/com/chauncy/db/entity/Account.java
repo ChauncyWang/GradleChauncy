@@ -1,10 +1,12 @@
 package com.chauncy.db.entity;
 
+import java.io.Serializable;
+
 /**
  * 账目
  * Created by 13969 on 2017/5/31.
  */
-public class Account {
+public class Account implements Serializable{
     private String id;
     private boolean pay;
     private double money;

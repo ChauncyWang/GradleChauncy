@@ -60,6 +60,7 @@ public class UserDaoImpl implements IUserDao {
             add(user);
             return true;
         }catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }

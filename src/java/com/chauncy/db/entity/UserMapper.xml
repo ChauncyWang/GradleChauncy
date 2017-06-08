@@ -53,12 +53,12 @@
 	</select>
 	<!-- 更新User -->
 	<update id="updateUser" parameterType="User">
-		UPDATE db_user,db_user_info
+		UPDATE db_user_info
 		SET
 			is_man = #{userInfo.isMan},
 			age = #{userInfo.age},
 			is_city = #{userInfo.isCity}
-		WHERE id = ${id} and u_id = id and password = #{password}
+		WHERE u_id = ${id}
 	</update>
 
 	<!-- 各种 Map -->
