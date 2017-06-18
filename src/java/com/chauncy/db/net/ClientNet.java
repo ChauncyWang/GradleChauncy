@@ -11,10 +11,11 @@ import static com.chauncy.nionetframework.util.NetTools.*;
  * Created by 13969 on 2017/6/5.
  */
 public class ClientNet {
-    private static String host = "192.168.3.2";
+    private static String host;
     private static int port = 18896;
     private Socket socket;
-    public ClientNet() throws IOException {
+    public ClientNet(String ip) throws IOException {
+        host = ip;
         socket = new Socket(host,port);
     }
 

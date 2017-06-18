@@ -15,7 +15,7 @@
 			purpose purpose,
 			place place
 		FROM db_account
-		WHERE id = #{id}
+		WHERE u_id = #{id}
 	</select>
 
 	<select id="selectAll" resultType="Account">

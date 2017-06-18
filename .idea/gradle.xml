@@ -10,8 +10,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/HOI4" />
-            <option value="$PROJECT_DIR$/foc" />
             <option value="$PROJECT_DIR$/tomcat" />
           </set>
         </option>

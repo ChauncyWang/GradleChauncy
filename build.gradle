@@ -5,6 +5,17 @@ apply plugin: 'groovy'
 version = 0.1
 sourceCompatibility = 1.7
 
+jar {
+    manifest {  //incubating版本，以后版本可能会改API
+        attributes("Main-Class": "com.chauncy.db.MainDB",
+                "Implementation-Title": "Gradle",
+                "Class-Path":"\\libs")
+    }
+    into('lib') {
+        from configurations.runtime
+    }
+}
+
 sourceSets {
     main {
         java {
@@ -68,10 +79,10 @@ dependencies {
 //  httpPort = 9090
 //  contextPath = 'Gradle'
 //}
-/*
+
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
-} */
+}
 
 //拷贝jar包
 task copyJars(type: Copy) {
@@ -84,12 +95,10 @@ task copyJars(type: Copy) {
         println "jar包拷贝成功!"
     }
 }
-task ServerMain(type: JavaExec, dependsOn: classes) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'com.chauncy.niochet.server.ServerMain'
-}
 
-task ClientMain(type: JavaExec, dependsOn: classes) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'com.chauncy.niochet.client.ClientMain'
+task makeJar(type: Copy) {
+    from configurations.runtime
+    into 'build/libs/'
+    include '*.jar'
 }
+makeJar.dependsOn(jar)

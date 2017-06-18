@@ -9,6 +9,10 @@ import com.chauncy.nionetframework.NIOServer;
 import com.chauncy.nionetframework.entity.MessageNode;
 import com.chauncy.nionetframework.entity.NetMessage;
 import org.apache.log4j.Logger;
+
+import java.util.LinkedList;
+import java.util.List;
+
 import static com.chauncy.db.net.DBNetMessageType.*;
 
 /**
@@ -74,12 +78,16 @@ public class MessageHandler implements Runnable {
                 break;
             case MY_ACCOUNT:
                 String id = (String) nmsg.obj;
-                resultMsg = new NetMessage(MY_ACCOUNT, AccountService.myAccount(id));
+                List<Account> accounts = AccountService.myAccount(id);
+                if(accounts == null) {
+                    accounts = new LinkedList<>();
+                }
+                resultMsg = new NetMessage(MY_ACCOUNT, accounts);
                 result = new MessageNode(msg.getIp(),msg.getPort(),resultMsg);
                 nioServer.getMq().addToWMQ(result);
                 break;
             case ALL_ACCOUNT:
-                resultMsg = new NetMessage(MY_ACCOUNT, AccountService.allAccount());
+                resultMsg = new NetMessage(ALL_ACCOUNT, AccountService.allAccount());
                 result = new MessageNode(msg.getIp(),msg.getPort(),resultMsg);
                 nioServer.getMq().addToWMQ(result);
                 break;
